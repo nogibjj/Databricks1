@@ -8,3 +8,8 @@ databricks-sql-connector
 databricks-connect==10.4.*
 fastapi
 uvicorn[standard]
+dask 
+dask[distributed]
+bokeh
+streamlit
+jupyterlab

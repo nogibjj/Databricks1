@@ -10,7 +10,7 @@ def cli():
 
 #build a click command
 @cli.command()
-@click.option("--query", default="SELECT * FROM default.diamonds LIMIT 2", help="SQL query to execute")
+@click.option("--query", default="SELECT * FROM default.nyt LIMIT 2", help="SQL query to execute")
 def cli_query(query):
     """Execute a SQL query"""
     querydb(query)
