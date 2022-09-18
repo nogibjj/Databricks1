@@ -14,27 +14,7 @@ import os
 @app.get("/")
 async def root():
     """ Return an article and its identity from the database """
-    return {"Is it real or fake": "hello News World!"}
-
-
-@app.get("/add/{num1}/{num2}")
-async def add(num1: int, num2: int):
-    """Add two numbers together"""
-
-    total = num1 + num2
-    return {"total": total}
-
-@app.get("/realnews")
-async def realnews():
-    """print news"""
-    authors = querydb("SELECT author FROM default.nyt WHERE label == 'Real'")
-    return {"Authentic Author": authors}
-
-@app.get("/fakenews")
-async def fakenews():
-    """print news"""
-    authors = querydb("SELECT author FROM default.nyt WHERE label == 'Fake'")
-    return {"Fake Author": authors}
+    return {"Welcome to the News World!": "Please choose a number from 1 to 2088 to see the news and guess its identity!"}
 
 @app.get("/news/{num}")
 async def news(num: int):
@@ -58,7 +38,19 @@ async def news(num: int, labelanswer: str):
                     result.append(field)
             if labelanswer in result:
                 return {"Correct! You have a good sense of news!"}
-            return {"Wrong! Guess Again!"}
+            return {"Are you sure?? Guess Again!"}
+
+@app.get("/realnews")
+async def realnews():
+    """print news authors"""
+    authors = querydb("SELECT author FROM default.nyt WHERE label == 'Real'")
+    return {"Authentic Authors": authors}
+
+@app.get("/fakenews")
+async def fakenews():
+    """print news authors"""
+    authors = querydb("SELECT author FROM default.nyt WHERE label == 'Fake'")
+    return {"Fake Authors": authors}
 
 @app.get("/query")
 async def query():
