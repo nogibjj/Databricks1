@@ -1,4 +1,4 @@
-# Fakenews Detection Check! (databricks & fastapi)
+# Fakenews Detection Check!
 A repo to assimilate databricks and fastapi
 
 
@@ -20,7 +20,7 @@ The project aims to design an interactive small game of identifying fake news.
 
 * fakenews_app is the main code of the project that users can see the overall fakenews trend in the dataset, e.g. what are those authors generating the fakenews. Additionally, users can randomly select a number (up to 2078) and read the article to guess it is fake news or real news. 
 
-* The goal of the project is to let users experience their sense of detecting fake news! It might hopefully help readers to be more cautious when they are reading real-world news articles.
+* The goal of the project is to let users experience their sense of detecting fake news! It might hopefully help readers to be more cautious when they are reading news articles in their daily life.
 
 ## Demo of the project
 
