@@ -1,11 +1,23 @@
-# assimilate-databricks
-A repo to assimilate databricks
+# Fakenews Detection Check! (databricks & fastapi)
+A repo to assimilate databricks and fastapi
 
-## API Getting Started
+## Data Source
+[Kaggle Dataset](https://www.kaggle.com/datasets/ruchi798/source-based-news-classification?resource=download)
 
-![databricks-api](https://user-images.githubusercontent.com/58792/189719737-fcdaf61f-93d2-415b-8eea-ebb96143187d.png)
+This is the dataset containing content posted by politicians, news channels, newspaper websites, or even common civilians on social media. It has been a concern that social media provides the room for people spreading mis-information. The creators of the dataset have classified all the articels into 'Fake' and 'Real' label, which the project will mainly use to design the interactive web app.
 
+## API Explanation for the Project
+![API_databricks](https://user-images.githubusercontent.com/112578755/190914864-afd04731-35f1-4458-902f-c0b0ac791a4d.jpg)
 
+## Goal of the Project
+
+The project aims to design an interactive small game of identifying fake news. 
+
+* First, Databricks is used to upload the `news articles` dataset and connect it with codespaces by using the microservice(FastAPI) and the command-line tool(click and app). 
+
+* fakenews_app is the main code of the project that users can see the overall fakenews trend in the dataset, e.g. what are those authors generating the fakenews. Additionally, users can randomly select a number (up to 2078) and read the article to guess it is fake news or real news. 
+
+* The goal of the project is to let users experience their sense of detecting fake news! It might hopefully help readers to be more cautious when they are reading real-world news articles.
 
 ## Setup auth
 
@@ -17,8 +29,9 @@ Place in Codespace secrets
 ```bash
 DATABRICKS_HOST
 DATABRICKS_TOKEN
+DATABRICKS_SERVER_HOSTNAME
+DATABRICKS_HTTP_PATH
 ```
-
 
 ## Test out CLI
 
