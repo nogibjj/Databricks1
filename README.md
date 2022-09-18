@@ -24,6 +24,7 @@ The project aims to design an interactive small game of identifying fake news.
 
 ## Demo of the project
 
+[Demo video Link](https://github.com/nogibjj/Databricks1/issues/2#issue-1377114898)
 
 ## Setup auth
 
