@@ -15,7 +15,7 @@ async def root():
 async def news(num: int):
     """print news"""
     content = querydb(f"SELECT text FROM (Select ROW_NUMBER() OVER (order by title) as Row_Number, * from default.nyt) as tbl Where tbl.Row_Number == {num}")
-    return {"text": content}
+    return {content: "Please guess whether this news is 'Real' or 'Fake'!"}
 
 @app.get("/news/{num}/{labelanswer}")
 async def news(num: int, labelanswer: str):
