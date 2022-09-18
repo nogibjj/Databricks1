@@ -13,4 +13,3 @@ dask[distributed]
 bokeh
 streamlit
 jupyterlab
-pandas

@@ -1,15 +1,10 @@
-from ast import Str
-from tkinter.font import names
 from fastapi import FastAPI
 import uvicorn
 from dblib.querydb import querydb
-import pandas as pd
-
-app = FastAPI()
-
 from databricks import sql
 import os
 
+app = FastAPI()
 
 @app.get("/")
 async def root():
